@@ -9,15 +9,15 @@ namespace SelectionStatements.Tests
     public class StatementsTests
     {
         private StringWriter writer;
-        
+
         [SetUp]
         public void SetUp()
         {
             this.writer = new StringWriter();
             Console.SetOut(this.writer);
         }
-        
-        [OneTimeTearDown] 
+
+        [OneTimeTearDown]
         public void Cleanup()
         {
             this.writer.Close();
@@ -39,7 +39,7 @@ namespace SelectionStatements.Tests
 
             Assert.AreEqual(expected, actual);
         }
-        
+
         [TestCase(7, -23, 13, 13)]
         [TestCase(77, 23, -13, 77)]
         [TestCase(77, -23, 13, 77)]
@@ -56,7 +56,7 @@ namespace SelectionStatements.Tests
 
             Assert.AreEqual(expected, actual);
         }
-        
+
         [TestCase(7, -23, 13, 13)]
         [TestCase(77, 23, -13, 77)]
         [TestCase(77, -23, 13, 77)]
@@ -128,7 +128,7 @@ namespace SelectionStatements.Tests
             Statements.WriteTheInformationAboutDayWithIfElse(dayOfWeek);
             return this.writer.GetStringBuilder().ToString().Trim();
         }
-        
+
         [TestCase(DayOfWeek.Sunday, ExpectedResult = "The weekend.")]
         [TestCase(DayOfWeek.Saturday, ExpectedResult = "The weekend.")]
         [TestCase(DayOfWeek.Monday, ExpectedResult = "The first day of the work week.")]
@@ -158,7 +158,7 @@ namespace SelectionStatements.Tests
         {
             return Statements.GetLengthWithCascadedIfElse(number);
         }
-        
+
         [TestCase(int.MinValue, ExpectedResult = 10)]
         [TestCase(int.MaxValue, ExpectedResult = 10)]
         [TestCase(-1101123234, ExpectedResult = 10)]
@@ -176,7 +176,7 @@ namespace SelectionStatements.Tests
         {
             return Statements.GetLengthWithSwitchExpression(number);
         }
-        
+
         [TestCase((sbyte)-12, ExpectedResult = "-12 is sbyte.")]
         [TestCase((byte)126, ExpectedResult = "126 is byte.")]
         [TestCase((ushort)65478, ExpectedResult = "65478 is ushort.")]
@@ -191,7 +191,7 @@ namespace SelectionStatements.Tests
         {
             return Statements.GetTypeOfIntegerWithCascadedIfElse(arg);
         }
-        
+
         [TestCase((sbyte)-12, ExpectedResult = "-12 is sbyte.")]
         [TestCase((byte)126, ExpectedResult = "126 is byte.")]
         [TestCase((ushort)65478, ExpectedResult = "65478 is ushort.")]
@@ -206,7 +206,7 @@ namespace SelectionStatements.Tests
         {
             return Statements.GetTypeOfIntegerWithSwitchStatement(arg);
         }
-        
+
         [TestCase((sbyte)-12, ExpectedResult = "-12 is sbyte.")]
         [TestCase((byte)126, ExpectedResult = "126 is byte.")]
         [TestCase((ushort)65478, ExpectedResult = "65478 is ushort.")]
@@ -240,7 +240,7 @@ namespace SelectionStatements.Tests
         {
             return Statements.GetMonthWithCascadedIfElse(month);
         }
-        
+
         [TestCase(1, ExpectedResult = Month.January)]
         [TestCase(2, ExpectedResult = Month.February)]
         [TestCase(3, ExpectedResult = Month.March)]
@@ -259,7 +259,7 @@ namespace SelectionStatements.Tests
         {
             return Statements.GetMonthWithSwitchStatement(month);
         }
-        
+
         [TestCase(1, ExpectedResult = Month.January)]
         [TestCase(2, ExpectedResult = Month.February)]
         [TestCase(3, ExpectedResult = Month.March)]

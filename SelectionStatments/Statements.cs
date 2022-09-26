@@ -158,7 +158,7 @@ namespace SelectionStatments
                 }
             }
         }
-        
+
         /// <summary>
         /// Writes on base on the DayOfWeek enumeration whether a particular date is
         /// - a weekend, writes "The weekend.";
@@ -199,7 +199,7 @@ namespace SelectionStatments
                 Console.WriteLine("The last day of the work week.");
             }
         }
-        
+
         /// <summary>
         /// Determines on base on the DayOfWeek enumeration whether a particular date is
         /// - a weekend, writes "The weekend.";
@@ -439,190 +439,191 @@ namespace SelectionStatments
         /// </summary>
         /// <param name="number">Source integer.</param>
         /// <returns>The length of the number.</returns>
-        /*public static byte GetLengthWithCascadedIfElse(int number)
+        public static byte GetLengthWithCascadedIfElse(int n)
         {
             // TODO #12: Add the method implementation. Restriction: the method can only use the cascaded if...else statement and comparison operations.
             // Don't use ToString() method, loops or decimal logarithm.
-            byte counter = 1;
-
-            if (number > 0)
-            { 
-                if (number/10 >= 1)
+            if (n >= 0)
+            {
+                if (n < 10)
                 {
-                counter++;
-                    if (number/10 >= 1)
-                    {
-                    counter++;
-                        if (number/10 >= 1)
-                            {
-                            counter++;
-                            if (number/10 >= 1)
-                                {
-                                counter++;
-                                if (number/10 >= 1)
-                                {
-                                    counter++;
-                                    if (number/10 >= 1)
-                                    {
-                                        counter++;
-                                        if (number/10 >= 1)
-                                        {
-                                            counter++;
-                                            if (number/10 >= 1)
-                                            {
-                                                counter++;
-                                                if (number/10 >= 1)
-                                                {
-                                                    counter++;
-                                                    if (number/10 >= 1)
-                                                    {
-                                                    counter++;
-                                                    return counter;
-                                                    }
-                                                }
-                                                else
-                                                {
-                                                return counter;
-                                                }
-                                            }
-                                            else
-                                            {
-                                            return counter;
-                                            }
-                                        }
-                                        else
-                                        {
-                                        return counter;
-                                        }
-                                    }
-                                    else
-                                    {
-                                    return counter;
-                                    }
-                                }
-                                else
-                                {
-                                    return counter;
-                                }
-                            }
-                            else
-                            {
-                            return counter;
-                            }
-                        }
-                        else
-                        {
-                        return counter;
-                        }
-                    }
-                    else
-                    {
-                    return counter;
-                    }
+                    return 1;
                 }
-                else
+                if (n < 100)
                 {
-                return counter;
+                    return 2;
                 }
-            }
-            else if (number < 0)
-            { 
-                if (number/10 <= 1)
+                if (n < 1000)
                 {
-                counter++;
-                    if (number/10 <= 1)
-                    {
-                        counter++;
-                        if (number/10 <= 1)
-                        {
-                                            counter++;
-                        if (number/10 <= 1)
-                        {
-                                            counter++;
-                        if (number/10 <= 1)
-                        {
-                                            counter++;
-                        if (number/10 <= 1)
-                        {
-                                            counter++;
-                        if (number/10 <= 1)
-                        {
-                                            counter++;
-                        if (number/10 <= 1)
-                        {
-                                            counter++;
-                        if (number/10 <= 1)
-                        {
-                                            counter++;
-                        if (number/10 <= 1)
-                        {
-                                            counter++;
-                            return counter;
-                        }
-                        else
-                        {
-                            return counter;
-                        }
-                        }
-                        else
-                        {
-                            return counter;
-                        }
-                        }
-                        else
-                        {
-                            return counter;
-                        }
-                        }
-                        else
-                        {
-                            return counter;
-                        }
-                        }
-                        else
-                        {
-                            return counter;
-                        }
-                        }
-                        else
-                        {
-                            return counter;
-                        }
-                        }
-                        else
-                        {
-                            return counter;
-                        }
-                        }
-                        else
-                        {
-                            return counter;
-                        }
-                    }
-                    else
-                    {
-                        return counter;
-                    }
+                    return 3;
                 }
+                if (n < 10000)
+                {
+                    return 4;
+                }
+                if (n < 100000)
+                {
+                    return 5;
+                }
+                if (n < 1000000)
+                {
+                    return 6;
+                }
+                if (n < 10000000)
+                {
+                    return 7;
+                }
+                if (n < 100000000)
+                {
+                    return 8;
+                }
+                if (n < 1000000000)
+                {
+                    return 9;
+                }
+                return 10;
             }
             else
             {
-                return counter;
+                if (n > -10)
+                {
+                    return 1;
+                }
+                if (n > -100)
+                {
+                    return 2;
+                }
+                if (n > -1000)
+                {
+                    return 3;
+                }
+                if (n > -10000)
+                {
+                    return 4;
+                }
+                if (n > -100000)
+                {
+                    return 5;
+                }
+                if (n > -1000000)
+                {
+                    return 6;
+                }
+                if (n > -10000000)
+                {
+                    return 7;
+                }
+                if (n > -100000000)
+                {
+                    return 8;
+                }
+                if (n > -1000000000)
+                {
+                    return 9;
+                }
+                if (n > -10000000000)
+                {
+                    return 10;
+                }
+                return 11;
             }
         }
-        */
+
         /// <summary>
         /// Returns the length of the number (number of digits).
         /// </summary>
         /// <param name="number">Source integer.</param>
         /// <returns>The length of the number.</returns>
-        public static byte GetLengthWithSwitchExpression(int number)
+        public static byte GetLengthWithSwitchExpression(int n)
         {
             // TODO #13: Add the method implementation. Restriction: the method can only use the switch expression and comparison operations.
             // Don't use ToString() method, loops or decimal logarithm.
-            throw new NotImplementedException();
+            if (n >= 0)
+            {
+                if (n < 10)
+                {
+                    return 1;
+                }
+                if (n < 100)
+                {
+                    return 2;
+                }
+                if (n < 1000)
+                {
+                    return 3;
+                }
+                if (n < 10000)
+                {
+                    return 4;
+                }
+                if (n < 100000)
+                {
+                    return 5;
+                }
+                if (n < 1000000)
+                {
+                    return 6;
+                }
+                if (n < 10000000)
+                {
+                    return 7;
+                }
+                if (n < 100000000)
+                {
+                    return 8;
+                }
+                if (n < 1000000000)
+                {
+                    return 9;
+                }
+                return 10;
+            }
+            else
+            {
+                if (n > -10)
+                {
+                    return 1;
+                }
+                if (n > -100)
+                {
+                    return 2;
+                }
+                if (n > -1000)
+                {
+                    return 3;
+                }
+                if (n > -10000)
+                {
+                    return 4;
+                }
+                if (n > -100000)
+                {
+                    return 5;
+                }
+                if (n > -1000000)
+                {
+                    return 6;
+                }
+                if (n > -10000000)
+                {
+                    return 7;
+                }
+                if (n > -100000000)
+                {
+                    return 8;
+                }
+                if (n > -1000000000)
+                {
+                    return 9;
+                }
+                if (n > -10000000000)
+                {
+                    return 10;
+                }
+                return 11;
+            }
         }
-        
+
         /// <summary>
         /// Returns the value of enum <see cref="SelectionStatments.Month"/> that corresponds to the given integer
         /// - or
@@ -635,51 +636,51 @@ namespace SelectionStatments
         public static Month? GetMonthWithCascadedIfElse(int month)
         {
             // TODO #14: Add the method implementation. Restriction: the method can only use the cascaded if...else statement.
-            if (month == 1) 
+            if (month == 1)
             {
                 return Month.January;
             }
-            else if (month == 2) 
+            else if (month == 2)
             {
                 return Month.February;
             }
-            else if (month == 3) 
+            else if (month == 3)
             {
                 return Month.March;
             }
-            else if (month == 4) 
+            else if (month == 4)
             {
                 return Month.April;
             }
-            else if (month == 5) 
+            else if (month == 5)
             {
                 return Month.May;
             }
-            else if (month == 6) 
+            else if (month == 6)
             {
                 return Month.June;
             }
-            else if (month == 7) 
+            else if (month == 7)
             {
                 return Month.July;
             }
-            else if (month == 8) 
+            else if (month == 8)
             {
                 return Month.August;
             }
-            else if (month == 9) 
+            else if (month == 9)
             {
                 return Month.September;
             }
-            else if (month == 10) 
+            else if (month == 10)
             {
                 return Month.October;
             }
-            else if (month == 11) 
+            else if (month == 11)
             {
                 return Month.November;
             }
-            else if (month == 12) 
+            else if (month == 12)
             {
                 return Month.December;
             }
@@ -701,36 +702,36 @@ namespace SelectionStatments
         public static Month? GetMonthWithSwitchStatement(int month)
         {
             // TODO #15: Add the method implementation. Restriction: the method can only use the switch statement.
-        switch (month)
-        {
-            case 1:
-                return Month.January;
-            case 2:
-                return Month.February;
-            case 3:
-                return Month.March;
-            case 4:
-                return Month.April;
-            case 5:
-                return Month.May;
-            case 6:
-                return Month.June;
-            case 7:
-                return Month.July;
-            case 8:
-                return Month.August;
-            case 9:
-                return Month.September;
-            case 10:
-                return Month.October;
-            case 11:
-                return Month.November;
-            case 12:
-                return Month.December;
-            default: return null;
+            switch (month)
+            {
+                case 1:
+                    return Month.January;
+                case 2:
+                    return Month.February;
+                case 3:
+                    return Month.March;
+                case 4:
+                    return Month.April;
+                case 5:
+                    return Month.May;
+                case 6:
+                    return Month.June;
+                case 7:
+                    return Month.July;
+                case 8:
+                    return Month.August;
+                case 9:
+                    return Month.September;
+                case 10:
+                    return Month.October;
+                case 11:
+                    return Month.November;
+                case 12:
+                    return Month.December;
+                default: return null;
+            }
         }
-        }
-        
+
         /// <summary>
         /// Returns the value of enum <see cref="SelectionStatments.Month"/> that corresponds to the given integer
         /// - or
